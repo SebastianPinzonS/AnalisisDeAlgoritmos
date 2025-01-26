@@ -1,0 +1,18 @@
+bank,lending_to
+JPMorgan Chase,Wells Fargo,Deutsche Bank,Goldman Sachs,BNP Paribas
+Wells Fargo,Morgan Stanley,Barclays,Credit Suisse
+Morgan Stanley,Société Générale,BBVA,HSBC
+Deutsche Bank,Credit Suisse,Santander,UBS
+Goldman Sachs,UniCredit,BBVA,ING
+BNP Paribas,Santander,UniCredit,Standard Chartered
+Credit Suisse,UBS,Barclays,ING
+HSBC,Standard Chartered,RBS,Santander
+Barclays,RBS,Standard Chartered,UniCredit
+Santander,BBVA,ING,RBS
+Société Générale,
+BBVA,
+UBS,
+UniCredit,
+ING,
+Standard Chartered,
+RBS,

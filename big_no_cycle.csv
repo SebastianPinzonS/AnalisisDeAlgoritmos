@@ -1,0 +1,38 @@
+bank,lending_to
+JPMorgan Chase,Wells Fargo,Deutsche Bank,Goldman Sachs,BNP Paribas,Credit Suisse,Barclays
+Wells Fargo,Morgan Stanley,Barclays,Credit Suisse,HSBC,Santander,UBS
+Morgan Stanley,Société Générale,BBVA,HSBC,Standard Chartered,ING,UniCredit
+Deutsche Bank,Credit Suisse,Santander,UBS,RBS,DZ Bank,Commerzbank
+Goldman Sachs,UniCredit,BBVA,ING,CaixaBank,Intesa Sanpaolo,ABN AMRO
+BNP Paribas,Santander,UniCredit,Standard Chartered,Crédit Agricole,Nordea,KBC
+Credit Suisse,UBS,Barclays,ING,Rabobank,DNB,Erste Group
+HSBC,Standard Chartered,RBS,Santander,Bank of China,ICBC,SMFG
+Barclays,RBS,Standard Chartered,UniCredit,Allied Irish,Bank of Ireland,Danske
+Santander,BBVA,ING,RBS,Millennium BCP,Banco BPM,PKO
+Société Générale,
+BBVA,
+UBS,
+UniCredit,
+ING,
+Standard Chartered,
+RBS,
+DZ Bank,
+Commerzbank,
+CaixaBank,
+Intesa Sanpaolo,
+ABN AMRO,
+Crédit Agricole,
+Nordea,
+KBC,
+Rabobank,
+DNB,
+Erste Group,
+Bank of China,
+ICBC,
+SMFG,
+Allied Irish,
+Bank of Ireland,
+Danske,
+Millennium BCP,
+Banco BPM,
+PKO,

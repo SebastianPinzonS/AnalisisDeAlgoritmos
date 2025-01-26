@@ -1,0 +1,38 @@
+bank,lending_to
+JPMorgan Chase,Wells Fargo,Deutsche Bank,Goldman Sachs,BNP Paribas,Morgan Stanley,HSBC
+Wells Fargo,Morgan Stanley,JPMorgan Chase,Barclays,Goldman Sachs,Deutsche Bank,Credit Suisse
+Morgan Stanley,Deutsche Bank,Goldman Sachs,Société Générale,JPMorgan Chase,BNP Paribas,HSBC
+Deutsche Bank,BNP Paribas,Goldman Sachs,HSBC,Wells Fargo,Barclays,Credit Suisse
+Goldman Sachs,JPMorgan Chase,Deutsche Bank,BBVA,Morgan Stanley,Wells Fargo,Santander
+BNP Paribas,Deutsche Bank,Santander,Morgan Stanley,HSBC,Goldman Sachs,Barclays
+Credit Suisse,JPMorgan Chase,UBS,Wells Fargo,Deutsche Bank,HSBC,BNP Paribas
+HSBC,Deutsche Bank,BNP Paribas,Credit Suisse,Morgan Stanley,Barclays,Goldman Sachs
+Barclays,Credit Suisse,HSBC,Morgan Stanley,Deutsche Bank,JPMorgan Chase,Wells Fargo
+Santander,BNP Paribas,UniCredit,Deutsche Bank,Goldman Sachs,Credit Suisse,HSBC
+UBS,Credit Suisse,Deutsche Bank,Morgan Stanley,JPMorgan Chase,Wells Fargo,HSBC
+BBVA,Goldman Sachs,Santander,BNP Paribas,Deutsche Bank,Morgan Stanley,Barclays
+UniCredit,Santander,BNP Paribas,Deutsche Bank,Credit Suisse,HSBC,JPMorgan Chase
+Société Générale,
+ING,
+Standard Chartered,
+RBS,
+DZ Bank,
+Commerzbank,
+CaixaBank,
+Intesa Sanpaolo,
+ABN AMRO,
+Crédit Agricole,
+Nordea,
+KBC,
+Rabobank,
+DNB,
+Erste Group,
+Bank of China,
+ICBC,
+SMFG,
+Allied Irish,
+Bank of Ireland,
+Danske,
+Millennium BCP,
+Banco BPM,
+PKO,
