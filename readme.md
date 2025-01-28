@@ -82,9 +82,12 @@ Esto muestra las aristas del MST y los costos asociados.
 ## 🏦 Detección de Autopréstamos en Sistemas Bancarios
 
 ### **Enunciado**
-La Superintendencia Bancaria desea identificar si existen autopréstamos en el sistema bancario. Un autopréstamo puede ocurrir de dos formas:
-1. Un banco se presta dinero directamente a sí mismo.
-2. Un banco se presta dinero a través de una cadena de préstamos que regresa al mismo banco (es decir, un ciclo en el grafo dirigido).
+ La Superintendencia Bancaria tiene un registro de préstamos que cada entidad bancaria hace a otra
+en el país. Con esta información, la Superintendencia está interesada en detectar si hay autopréstamos
+en el sistema. Además de casos de prestamos directos de una entidad a si misma, una autoprestamo
+también puede ser un esquema en el que una entidad se presta plata a si misma a traves de una
+cadena de prestamos que inicia y termina en la misma entidad. Dada la relación p de prestamos entre
+entidades, determinar si existe algún autopréstamo.
 
 ---
 
