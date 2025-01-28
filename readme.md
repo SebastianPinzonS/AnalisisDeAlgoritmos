@@ -163,18 +163,18 @@ python lending_chain.py has_chain.csv
 ### 📊 Salida del Programa
 
 El programa devuelve:
-- `True` si existe al menos un ciclo (autopréstamo).
-- `False` si no hay ciclos en el grafo.
+- `Se ha detectado un auto prestamo` si existe al menos un ciclo (autopréstamo).
+- `` si no hay ciclos en el grafo.
 
 #### Ejemplo de Salida:
 **Con archivo `has_chain.csv`:**
 ```
-True
+Se ha detectado un auto prestamo
 ```
 
 **Con archivo `no_chain.csv`:**
 ```
-False
+No se ha detectado un auto prestamo
 ```
 
 ---
@@ -193,5 +193,5 @@ False
      ```
 
 3. **Ciclos en Prestamos**:
-   - El programa identifica ciclos en grafos dirigidos. Si no existen conexiones entre los nodos o no hay un ciclo, el resultado será `False`.
+   - El programa identifica ciclos en grafos dirigidos. Si no existen conexiones entre los nodos o no hay un ciclo, el resultado será `No se ha detectado un auto prestamo`.
 
