@@ -61,6 +61,7 @@ def process_txt_file(filepath):
             edges.append(edge)
     return num_node, edges
 
+
 if __name__ == '__main__':
     if len(sys.argv) != 2:
        print("Incorrect usage, instead try: python min_cost_double_way.py <txt_file>")
@@ -74,3 +75,6 @@ if __name__ == '__main__':
     print("Minimum Spanning Tree (MST):")
     for u, v, weight in mst:
         print(f"Edge ({u}, {v}) - Weight: {weight}")
+
+
+
