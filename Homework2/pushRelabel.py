@@ -22,17 +22,21 @@ def changeExcess(helper:list,v:int,n:int):
 def getExcess(helper:list,v:int):
     return helper[v][0]
 
-def initPR(graph:dict):
+def getMaxFlow(graph:dict):
+    flow = sum(graph[n][0] for n in graph[0])
+    return flow
+
+def initPR(graph:dict, nv:int):
     pointerArray = [k for k in graph.keys()] # Estructura usada como simulacion de un array con apuntador para hacer seleccion de push
     pointerArray.pop(0)
     pointerArray.pop(-1)
     helper = {i:[0,0] for i in graph} # Estructura que contiene los excesos y alturas de los vertices
-    helper[0][0], helper[0][1] = None, len(graph)
+    helper[0][0], helper[0][1] = None, nv
 
     for i in range(1,len(graph)-1):
         helper[i][0], helper[i][1] = 0, 0 
 
-    helper[len(graph)-1][0], helper[len(graph)-1][1] = 0,0
+    helper[nv-1][0], helper[nv-1][1] = 0,0
 
     for v in graph[0]: # Este ciclo hace el push desde el origen hacia los vertices vecinos iniciando el preflujo
         changeExcess(helper, v, graph[0][v])
@@ -46,31 +50,37 @@ def push(helper,graph:dict,u:int,v:int):
     changeExcess(helper,u,-d)
     changeExcess(helper,v,+d)   
 
-def relabel(graph,i):
-    pass
-
 def load_graph_from_csv(filepath):
     graph = {}
     vertices = set()
-
+    
     with open(filepath, 'r') as f:
-        next(f)
+        nv = int(f.readline().strip())
+        
         for line in f:
             u, v, cap = map(int, line.strip().split(','))
+            
             vertices.add(u)
             vertices.add(v)
+            
             if u not in graph:
                 graph[u] = {}
             if v not in graph:
                 graph[v] = {}
-            graph[u][v] = cap
-            graph[v][u] = 0
+                
+            graph[u][v] = cap  
+            graph[v][u] = 0    
+    
     graph = dict(sorted(graph.items()))
-    return graph
+    
+    if len(vertices) != nv:
+        print(f"Warning: Expected {nv} vertices but found {len(vertices)}")
+    
+    return graph, nv
      
 
-def pushRelabel(graph):
-    helper, pointerArray = initPR(graph) 
+def pushRelabel(graph, nv):
+    helper, pointerArray = initPR(graph,nv) 
     p = 0
     while p < len(pointerArray):
         u = pointerArray[p]
@@ -87,13 +97,13 @@ def pushRelabel(graph):
                 p += 1
         else:
                 p += 1
-    return(getExcess(helper,-1))
 
 def main():
     filepath = sys.argv[1]
-    graph = load_graph_from_csv(filepath)
-    maxFlow = pushRelabel(graph)
-    print("El flujo maximo es: " + maxFlow)
+    graph,nv = load_graph_from_csv(filepath)
+    pushRelabel(graph,nv)
+    maxFlow = getMaxFlow(graph)
+    print("El flujo maximo es: " + str(maxFlow))
     
 if __name__ == "__main__":
     main()
