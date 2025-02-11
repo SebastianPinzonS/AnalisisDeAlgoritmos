@@ -1,4 +1,4 @@
-import sys
+import sys,copy,time
 
 def flowOperation(graph:dict, u:int, v:int, d:int): #Funcion que altera el grafo y el grafo recidual
     if d <= graph[u][v]:
@@ -98,12 +98,42 @@ def pushRelabel(graph, nv):
         else:
                 p += 1
 
+def getEdgeFlows(residual_graph, original_capacity):
+
+    flow_values = {}
+
+    for u in original_capacity:
+        flow_values[u] = {}
+        for v in original_capacity[u]:
+            residual_cap = residual_graph.get(u, {}).get(v, 0)
+            original_cap = original_capacity[u][v]
+            
+            flow_values[u][v] = original_cap - residual_cap
+            
+    
+    return flow_values
+
+def printEdgeFlows(flow_values):
+   
+    for u in flow_values:
+        for v in flow_values[u]:
+            if flow_values[u][v] > 0:  
+                print(f"Eje {u}->{v}: Flujo = {flow_values[u][v]}")
+
 def main():
     filepath = sys.argv[1]
     graph,nv = load_graph_from_csv(filepath)
+    originalGraph = copy.deepcopy(graph)
+    start = time.time()
     pushRelabel(graph,nv)
     maxFlow = getMaxFlow(graph)
     print("El flujo maximo es: " + str(maxFlow))
+    printEdgeFlows(getEdgeFlows(graph,originalGraph))
+    end = time.time()
+    print(f"La funcion demoro: {end - start:.4f} seconds" )
+
+
+
     
 if __name__ == "__main__":
     main()
