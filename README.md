@@ -1,3 +1,5 @@
+
+
 # Taller de Cubrimiento de Vértices: Algoritmos Aproximados
 
 ---
@@ -38,16 +40,15 @@ El archivo de entrada debe ser un archivo de texto plano (`.txt`) con el siguien
 - **Cada línea** contiene dos números separados por tab.
 
 #### Ejemplo de Archivo (`graph.txt`):
-```
-    1	5
-    1	4
-    2	3
-    2	6
-    3	4
-    4	5
-    4	6
-    5	7
-```
+
+1	5
+1	4
+2	3
+2	6
+3	4
+4	5
+4	6
+5	7
 
 ## **Ejecutar el Programa**
 
@@ -66,4 +67,12 @@ El archivo de entrada debe ser un archivo de texto plano (`.txt`) con el siguien
 
    ```bash
    python tarea6_ALGO.py <grafo_edges_<numero de vertices (100,1000,10000)>.txt> <numero_algoritmo>
+
+
+
+⸻
+
+Conclusiones
+
+Al analizar los resultados de los tres grafos ejecutados con los cuatro algoritmos, se observa que los algoritmos 2 y 3 producen coberturas menores en comparación con los algoritmos 1 y 4. Esta diferencia se debe a que los algoritmos 1 y 4 están optimizados al considerar el vértice de mayor grado, lo que permite obtener coberturas más eficientes, aunque con un impacto en el tiempo de ejecución.
 
